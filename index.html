@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto Total Media</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav id="navbar">
+        <div class="hamburger" id="hamburger">☰</div>
+        <ul id="nav-menu">
+            <li><a class="lista" href="#home">Inicio</a></li>
+            <li><a class="lista" href="#radio">Contacto Total Radio</a></li>
+            <li><a class="lista" href="#magazine">Revista</a></li>
+            <li><a class="lista" href="#programas">Programas</a></li>
+            <li><a class="lista" href="#podcast">Podcast</a></li>
+            <li><a class="lista" href="#quienes">Quienes Somos</a></li>
+            <li><a class="lista" href="#contactanos">Contacto</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div>
+            <img src="img/Muypronto.png" alt="Muy Pronto" class="muypronto">
+        </div>
+
+        <div>
+            <img src="img/temblara6.png" alt="El mundo temblara" class="temblara">
+        </div>
+        
+
+        <div class="titulo">
+            <h2>Llega Contacto Total Media</h2>
+        </div>
+
+        <div>
+            <img src="img/Logo CT Media PNG.png" alt="Total Media" class="totalmedia">
+        </div>
+
+        <p>Mientras tanto...</p>
+        <p>Mira la edición actual de la revista Contacto Total <a href="https://issuu.com/contactototal" target="_blank">AQUI</a></p>
+        <P>Escucha Contacto Total Radio <a href="https://radiostationusa.fm/online/onda-1190-am" target="_blank">AQUI</a></p>
+
+        <div class="two-footer">
+            <p>Medios Hispanos LLC</p>
+            <p>Creatividad sin límites</p>
+        </div>
+
+        <div class="footer">
+            <p>2025 Todos los derechos reservados © </p>
+        </div>
+
+    </main>
+
+    <script>
+        // Script para el menú hamburguesa en dispositivos móviles
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.getElementById('hamburger');
+            const navbar = document.getElementById('navbar');
+            const navMenu = document.getElementById('nav-menu');
+            
+            hamburger.addEventListener('click', function() {
+                navbar.classList.toggle('active');
+            });
+            
+            // Cerrar menú al hacer clic en un enlace
+            const navLinks = document.querySelectorAll('.lista');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navbar.classList.remove('active');
+                });
+            });
+            
+            // Cerrar menú al hacer scroll
+            window.addEventListener('scroll', function() {
+                navbar.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+</html>

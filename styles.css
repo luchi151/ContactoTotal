@@ -1,0 +1,207 @@
+/* Estilos base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('img/Fondo pagina web CT.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: white;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Estilos para navegación */
+nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 10px;
+    list-style-type: none;
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    margin: 5px 10px;
+}
+
+.lista {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+}
+
+.lista:hover {
+    color: #ff0000;
+}
+
+/* Estilos para el contenido principal */
+main {  
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 20px 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.muypronto, .temblara, .totalmedia {
+    max-width: 100%;
+    height: auto;
+    margin: 0 0;
+}
+
+.muypronto {
+    max-height: 120px;
+}
+
+.temblara {
+    max-height: 150px;
+}
+
+.totalmedia {
+    max-height: 120px;
+}
+
+.titulo {
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0;
+    width: 100%;
+}
+
+p {
+    font-size: 1.4em;
+    text-align: center;
+    margin: 5px 0;
+    padding: 0;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+a {
+    /* color: #f8c740; */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.two-footer {
+    margin: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2em;
+    color: white;
+    margin: 10px 20px;
+}
+
+/* Media Queries para responsividad */
+@media screen and (max-width: 1024px) {
+    .lista {
+        font-size: 1em;
+    }
+    
+    nav ul {
+        padding: 10px 5px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hamburger {
+        display: block;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        background-color: rgba(0, 0, 0, 0.8);
+        padding: 0;
+    }
+    
+    nav.active ul {
+        display: flex;
+    }
+    
+    nav ul li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    main {
+        padding-top: 80px;
+    }
+    
+    .titulo h2 {
+        font-size: 1.3em;
+    }
+    
+    p {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .muypronto {
+        max-height: 90px;
+    }
+    
+    .temblara {
+        max-height: 110px;
+    }
+    
+    .totalmedia {
+        max-height: 90px;
+    }
+    
+    .titulo h2 {
+        font-size: 1.1em;
+    }
+    
+    p {
+        font-size: 1em;
+    }
+    
+    main {
+        padding: 70px 10px 20px 10px;
+    }
+}
